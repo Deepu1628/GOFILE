@@ -2,6 +2,7 @@ package main
 
 import (
     "fmt"
+	"strings"
 )
 
 func main() {
@@ -42,27 +43,31 @@ func main() {
 	fmt.Printf("The value and type is displayed: %T , value: %v", x, x)//%T Type of datatype 
 	fmt.Printf("The type and value is displayed : %T, value: %v", y, y)//%v Value if the data type 
 //********************UNSigned integer with unit **************************7//
-	var x uint = 500// with unit only positive value are stored 
-	var y uint = 4500
-	fmt.Printf("Type: %T, value: %v", x, x)
-	fmt.Printf("Type: %T, value: %v", y, y)
+	var c uint = 500// with unit only positive value are stored 
+	var d uint = 4500
+	fmt.Printf("Type: %T, value: %v", c, d)
+	fmt.Printf("Type: %T, value: %v", c, d)
 //*********float ****
-var x float32 = 123.78
-  var y float32 = 3.4e+38
-  fmt.Printf("Type: %T, value: %v\n", x, x)
-  fmt.Printf("Type: %T, value: %v", y, y)
+var a float32 = 123.78
+  var b float32 = 3.4e+38
+  fmt.Printf("Type: %T, value: %v\n", a, b)
+  fmt.Printf("Type: %T, value: %v", a, b)
   //******************
-  var txt1 string = "Hello!"
-  var txt2 string
-  txt3 := "STRING WORD "
+  
+  //arithmetic operators are there in Go 
 
-  fmt.Printf("Type: %T, value: %\n", txt1, txt1)
-  fmt.Printf("Type: %T, value: %v\n", txt2, txt2)
-  fmt.Printf("Type: %T, value: %v\n", txt3, txt3)
-  //
+  cat := 10
+  dog:= 2
 
-
-
-
-
+  fmt.Println(cat +dog)
+// take two strings and concatenate them using Join() function, with single space as a separator.
+  var str1 = "Hello GO"
+    var str2 = "You are new to me "
+    var output = strings.Join([]string{str1, str2}, " ")
+    fmt.Println(output)
+//four strings in an a string array and joined them with the separator: comma ,.
+var w = []string{"dog", "cat", "pig", "monkey"}
+var sep = ","
+var answer = strings.Join(w, sep)
+fmt.Println(answer)
 }
